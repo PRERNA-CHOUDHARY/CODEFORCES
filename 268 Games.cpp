@@ -1,36 +1,25 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 int main()
 {
-    int t,count=0;   //4
+    int t,count=0;  
     cin>>t;
-    int arr[2*t];   //8 
-      // cout<<2*t;
+    int n=2*t;
+    int arr[n];
       for(int i=0;i<2*t;i++)  
       {
           cin>>arr[i];
-       //   cout<<arr[i];
       }
-
-       
-        
-        t--;
-     for(int i=0;i<=2*t;i+=2)   //0
+     for(int i=0;i<n;i+=2) 
    {
-     //   cout<<arr[i]<<"\n";
-        for(int j=1;j<=2*t;j+=2)  //1 3 5 
+        for(int j=1;j<n;j+=2)   
         {
-          //  cout<<arr[i]<<":"<<i<<" "<<arr[j]<<":"<<j<<"\n";
-            if(arr[i]==arr[j]  && j!=i+1) //100  
-            count++;  //1 
-            
+            if(arr[i]==arr[j]  && j!=i+1)  
+            {
+            count++;  
+            }
         }
     }
-
-
-    cout<<count;
-
+ cout<<count;
     return 0;
 }
